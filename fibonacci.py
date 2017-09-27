@@ -1,9 +1,9 @@
-def main():
-	a = b = c = 1
-	n = eval(input("Input an integer: "))
+def fibonacci(n):
+	a = 0
+	b = 1
 	for i in range(n):
-		c = a + b
-		a = b
-		b = c
-	print(a)
-main()
+		a, b = b, a + b
+	return (a)
+
+if __name__ == '__main__':
+	print(fibonacci(5))
